@@ -1,5 +1,4 @@
-public interface FinalProject 
+public interface FinalProject
 {
     public void begin();
-    // test
 }

@@ -6,7 +6,7 @@
 
 // ***************************************************************
 // DO NOT MODIFY THIS SECTION
-// Any imports needed for your program should be included in 
+// Any imports needed for your program should be included in
 // your local object
 // ***************************************************************
 import java.util.Scanner;
@@ -40,18 +40,18 @@ public class Itse2417Main
      *          a static Scanner provided by the main menu program.  Using
      *          your own, local Scanner will cause problems for everyone.
      *      Will be implementing the begin() method of the FinalProject interface. @see FinalProject.java
-     *      Do whatever you want inside begin().  Main requirement: your program must end cleanly 
+     *      Do whatever you want inside begin().  Main requirement: your program must end cleanly
      *          and return to Itse2417Main to display the menu.
     */
 
     static ArrayList<Object> menu = new ArrayList<Object>  (
-        Arrays.asList(   
-            new FinalProj(),          // Abdo 
-            new FinalProj(),          // Adams  
+        Arrays.asList(
+            new FinalProj(),          // Abdo
+            new FinalProj(),          // Adams
             new FinalProj(),          // Benitez
             new FinalProj(),          // Butler A
             new FinalProj(),          // Butler K
-            new FinalProj(),          // Castaneda
+            new Castaneda(),          // Castaneda
             new FinalProj(),          // Cole
             new FinalProj(),          // Denton
             new FinalProj(),          // Doan
@@ -63,7 +63,7 @@ public class Itse2417Main
             new FinalProj(),          // Ramirez
             new FinalProj(),          // Sylvester
             new FinalProj(),          // Thurman
-            new FinalProj(),          // Vanslyke                                                
+            new FinalProj(),          // Vanslyke
             new SmileyMenu()          // Smiley
                                                     ));
     // ***************************************************************
@@ -72,12 +72,12 @@ public class Itse2417Main
     // Constants for the menu choices
     final static int MAXCHOICE = menu.size();
     final static int EXIT = 0;
-    
+
     /**
      * Starting point for the program.
      *     Displays the menu list as selected by the user
-     *     Executes the entry in the 
-     *  
+     *     Executes the entry in the
+     *
      * @param args - command line arguments (not required for this program)
      * @return void
     */
@@ -94,7 +94,7 @@ public class Itse2417Main
             if(selection > 0)
             {
                 FinalProject e = (FinalProject) menu.get(selection - 1);
-                e.begin();    
+                e.begin();
             }
         } while (selection != 0);
 
@@ -104,8 +104,8 @@ public class Itse2417Main
     /**
      * Displays the user menu, a list of students in the class numbered.
      * User selects a number, which is converted to int and returned to main.
-     * 
-     * @return input    User selection from the menu as an int    
+     *
+     * @return input    User selection from the menu as an int
      * @throws NumberFormatException    Selection out of range or nonnumeric
      */
     static int showMenu() throws NumberFormatException
@@ -141,11 +141,11 @@ public class Itse2417Main
         System.out.println("0.  Exit");
         System.out.println();
         System.out.print("Your selection? ");
-        
+
         try
         {
             input = myScan.nextInt();
-            
+
             if( input < EXIT || input > MAXCHOICE)
             {
                 throw new NumberFormatException();
@@ -156,9 +156,9 @@ public class Itse2417Main
             System.out.println();
             System.out.println("*****************     ERROR     *****************");
             System.out.println("Please enter a number from the menu or 0 to exit.");
-            System.out.println("*****************     ERROR     *****************"); 
+            System.out.println("*****************     ERROR     *****************");
             input = -1;
-            System.out.println();   
+            System.out.println();
         }
 
         return input;

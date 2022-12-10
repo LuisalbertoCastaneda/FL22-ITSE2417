@@ -15,7 +15,7 @@ public class FinalProj implements FinalProject
         System.out.println();
         try
         {
-            java.util.concurrent.TimeUnit.SECONDS.sleep(2);  
+            java.util.concurrent.TimeUnit.SECONDS.sleep(2);
         }
         catch(InterruptedException e)
         {}
