@@ -24,6 +24,7 @@ public class Castaneda implements FinalProject {
         }while(!Exit);
         System.out.println("GoodBye friend ^_^ ");
     }
+
     private void noMath(){
         Scanner in = Itse2417Main.myScan;
         ArrayList<String> l = new ArrayList<>();
@@ -47,6 +48,7 @@ public class Castaneda implements FinalProject {
                         """,l.get(0),l.get(1),l.get(2),l.get(3),l.get(4),l.get(5),l.get(6),l.get(7),l.get(8),l.get(9),l.get(10));
         System.out.println(Total);
     }
+
     private void yesMath(){
         Scanner in = Itse2417Main.myScan;
         boolean Exit = false;
@@ -96,6 +98,7 @@ public class Castaneda implements FinalProject {
             }
         }while(!Exit);
     }
+
     private void calc(int check, String message1, String message2,String message3, String x, String measurement){
         double val1;
         double val2;
@@ -112,6 +115,7 @@ public class Castaneda implements FinalProject {
         }
         System.out.println(x+":"+val3+" "+measurement);
     }
+
     private double numCheck(String message){
         double temp;
         Scanner in = Itse2417Main.myScan;
@@ -123,6 +127,7 @@ public class Castaneda implements FinalProject {
         }while(temp < 1);
         return temp;
     }
+
     private double TryParseDouble(String x){
         try {
             return Double.parseDouble(x);
@@ -130,10 +135,12 @@ public class Castaneda implements FinalProject {
             return -1;
         }
     }
+
     private void message(String message,int time){
         System.out.println(message);
         waitC(time);
     }
+
     private void waitC(int time){
         time *= 1000;
         try{
